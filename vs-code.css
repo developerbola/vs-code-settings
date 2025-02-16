@@ -6,11 +6,15 @@
 }
 
 .sidebar > .composite {
-  height: 12px !important;
+  height: 0px !important;
 }
 
 .sidebar > .content {
-  height: 860px !important;
+  height: 880px !important;
+}
+.sidebar > .content > .composite.viewlet.extensions-viewlet.narrow,
+.pane > .pane-body {
+  padding-top: 10px;
 }
 
 .monaco-workbench .part.panel.bottom .composite.title {
@@ -19,24 +23,22 @@
 
 .mac .split-view-container .split-view-view:nth-child(2) {
   background: #000;
-  padding-top: 10px;
+}
+.tab-border-top-container {
+  display: none !important;
+}
+
+.tabs-container {
+  padding: 6px 0 6px 90px;
+  -webkit-app-region: drag;
 }
 
 .monaco-workbench
-  .part.editor
+  .activitybar
   > .content
-  .editor-group-container
-  > .title
-  .tabs-container
-  > .tab.active.tab-border-top
-  > .tab-border-top-container,
-.monaco-workbench
-  .part.editor
-  > .content
-  .editor-group-container
-  > .title
-  .tabs-container
-  > .tab.selected.tab-border-top
-  > .tab-border-top-container {
-  background-color: #7fffd476;
+  :not(.monaco-menu)
+  > .monaco-action-bar
+  .action-item.checked
+  .active-item-indicator:before {
+  border-left-color: #ffffff7a;
 }
